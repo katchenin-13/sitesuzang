@@ -1,0 +1,285 @@
+/* THE GENERALE CSS  */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{
+	font-family: "redressed" ;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+.redressed {
+	font-family: 'Ubuntu', sans-serif;
+}
+.gras{
+	font-weight: bold;
+}
+.blanc{
+	color: #ffffff !important;
+}
+.noir{
+	color: #000000  !important;
+}
+.orangee{
+	color: #f9b442 !important;
+}
+.ref{
+	color: #373736 !important;
+}
+.souligneur{
+	border-bottom: 4px solid #f9b442;
+}
+.bouton{
+	color: #000000 !important;
+	background-color:#f9b442 !important ;
+	font-family:" redressed";
+}
+.pilicecon{
+	font-size: 1.5rem;
+
+}
+
+/* THE GENERALE CSS  */
+/* NAVBAR OF THE HOME PAGE */
+.cc-navbar {
+	background-color: rgba(138, 14, 14, 0) !important;
+	 /* box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.54); */
+	  z-index: 999; 
+	  font-weight: bold;
+
+}
+.cc-navbar .nav-link {
+	border-bottom: 3px solid transparent;
+	transition: padding-bottom 0.4s ease-in-out, border-color 0.3s ease;
+	font-size: 20px;
+}
+.cc-navbar .nav-link:hover {
+	padding-bottom: 20px;
+	height: 44px;
+	border-bottom-color:#f9b442 ;
+	color: #f9b442 !important;
+	font-size: 26px bold !important;
+
+}
+/* END NAVBAR OF THE HOME PAGE */
+
+/* NAVBAR OF THE PAGE PRESENTATION AND ....... */
+.cc-navbar1 {
+	background-color:  #fff !important;
+	 /* box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.54); */
+	z-index: 99;
+}
+.cc-navbar1 .nav-link {
+	border-bottom: 1px solid transparent;
+	transition: padding-bottom 0.4s ease-in-out, border-color 0.3s ease;
+	font-size: 24px;
+}
+
+.cc-navbar1 .nav-link:hover {
+	padding-bottom: 40px;
+	height: 44px;
+	border-bottom-color:#f9b442 ;
+	color: #f9b442 !important;
+	font-size: 26px bold !important;
+}
+
+.btn-order {
+	
+	color: #64350d !important;
+	background-color:#f9b442 !important ;
+	transition: 0.5s;
+	font-family:" redressed";
+}
+	
+.btn-order1 {
+	
+	color: #000000 !important;
+	background-color:#faf8f4 !important ;
+	transition: 0.5s;
+	font-family:" redressed";
+}
+
+.accueil{
+	top: -3px;
+	width: 1600px !important;
+	left: -135px !important;
+	margin-right: 0px;
+	margin: 0px;
+	right: 0px;
+
+}
+
+
+
+
+@media screen and (min-width :684px) and (min-height: 665px) { 
+    .accueil-im{
+		height: 800px;
+		
+	}
+	
+    .conteneu-im{
+    top:100px
+    }
+	.texteacbea{
+		margin-top:-80px;
+		border-left-width: 1px;
+	}
+
+	
+	 .parents{
+	   position: relative;
+	 
+	}
+	
+	.conteneur {
+
+		column-count: 2;
+		font-size: 24px;
+		text-align: left;
+
+}
+	
+
+	.fil{
+        position:absolute;
+        left: 0px;
+		z-index: 999;
+		width:  700px;
+	    margin-left: 14% ;
+	    margin-top: 12%;
+		
+	}
+
+	
+	.fil1{
+		position: absolute;
+        /* width: 654px; */
+       /* right: 0px;
+     left: 361px; */
+	
+	 width:  700px;
+	 margin-left: 50% ;
+	 margin-top: 3%;
+		
+		
+	}
+	.tailletitre{
+		font-size: 40px;
+		width: 650px;
+	}
+	.tailledesc{
+		font-size: 1.5rem;
+		margin: 14px;
+		width: 500px;
+		text-align: left;
+	}
+	.titre1{
+		font-size: 40px;
+	
+	}
+	.bouton{
+		width: 144px;
+		height: 37px;
+	}
+ }
+
+
+@media screen and (max-width : 540px)  { 
+    .accueil{
+		display: block;
+		top: 100px;
+		width:100%; 
+		/* font-size: 21px !important; */
+	}
+	
+	.texteacbea{
+		margin-top: 59px;
+		border-left-width: 1px;
+	}
+	
+    .conteneur {
+
+		column-count: 2;
+		font-size: 15px;
+		text-align: left;
+
+}
+	 
+	.parents{
+		position: relative;
+		
+		
+	 }
+	 .texte-centrer{
+		text-align: center;
+	 }
+	 .enhaut{
+		position: relative !important;
+		top: -350px !important ;
+		width: 460px;
+		margin: 20px;
+		text-align: left;
+		
+	}
+	.bouton{
+		    height: 37px;
+			width: 144px;
+	}
+	.tailletitre{
+		font-size: 26px
+	}
+	.tailledesc{
+	
+    margin-right: 11px;
+	text-align:left
+	}
+    .pilicecon{
+	font-size: 15px;
+    }
+	.reference{
+		height: 40px;
+		width: 40px;
+	}
+	.img{
+		display: none;
+	}
+	 .enbas{
+		position: relative !important;
+		top: 365px !important;
+	}
+	.fil11{
+        position:relative;
+        right:0px;
+		z-index: 999;
+       
+		
+	}
+	.descr{
+		width: 460px;
+		margin: 20px;
+	}
+	/* style="
+	position: relative !important;
+	top: 341px !important;"
+	style="
+              position: relative !important; */
+		
+		
+	/* .parents1 .fil1{
+        position: relative;
+		right: 0px;
+		top: 0%;
+		bottom: 394px; 
+		
+	} */
+	/* .parents2.fil2{
+        position: relative;
+		right: 0px;
+		top: 394px; */
+		 
+		
+		
+	}
+
+
+
+

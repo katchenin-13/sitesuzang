@@ -1,0 +1,260 @@
+/* THE GENERALE CSS  */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{
+	font-family: "redressed" ;
+	border: 0px;
+	top: 0px;
+	left: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+.redressed {
+	font-family: 'Ubuntu', sans-serif;
+}
+.gras{
+	font-weight: bold;
+}
+.blanc{
+	color: #ffffff !important;
+}
+.noir{
+	color: #000000  !important;
+}
+.orangee{
+	color: #f9b442 !important;
+}
+.ref{
+	color: #373736 !important;
+}
+.souligneur{
+	border-bottom: 4px solid #f9b442;
+}
+.bouton{
+	color: #000000 !important;
+	background-color:#f9b442 !important ;
+	font-family:" redressed";
+}
+
+
+/* THE GENERALE CSS  */
+/* NAVBAR OF THE HOME PAGE */
+.cc-navbar {
+	background-color: rgba(138, 14, 14, 0) !important;
+	 /* box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.54); */
+	  z-index: 999; 
+	  font-weight: bold;
+
+}
+.cc-navbar .nav-link {
+	border-bottom: 3px solid transparent;
+	transition: padding-bottom 0.4s ease-in-out, border-color 0.3s ease;
+	font-size: 24px;
+}
+.cc-navbar .nav-link:hover {
+	padding-bottom: 20px;
+	height: 44px;
+	border-bottom-color:#f9b442 ;
+	color: #f9b442 !important;
+	font-size: 26px bold !important;
+
+}
+/* END NAVBAR OF THE HOME PAGE */
+
+/* NAVBAR OF THE PAGE PRESENTATION AND ....... */
+.cc-navbar1 {
+	background-color:  #fff !important;
+	 /* box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.54); */
+	z-index: 99;
+}
+.cc-navbar1 .nav-link {
+	border-bottom: 1px solid transparent;
+	transition: padding-bottom 0.4s ease-in-out, border-color 0.3s ease;
+	font-size: 24px;
+}
+
+.cc-navbar1 .nav-link:hover {
+	padding-bottom: 40px;
+	height: 44px;
+	border-bottom-color:#f9b442 ;
+	color: #f9b442 !important;
+	font-size: 26px bold !important;
+}
+
+.btn-order {
+	
+	color: #64350d !important;
+	background-color:#f9b442 !important ;
+	transition: 0.5s;
+	font-family:" redressed";
+}
+	
+.btn-order1 {
+	
+	color: #000000 !important;
+	background-color:#faf8f4 !important ;
+	transition: 0.5s;
+	font-family:" redressed";
+}
+
+
+.conteneur {
+
+		column-count: 2;
+
+}
+
+
+
+
+.bodylog{
+	background-color: #64350d;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 100vh;
+}
+
+.login-box{
+	
+	width:600px;
+    margin:8% auto;
+    padding:10px;
+    border-radius: 20px;
+	display: block;
+
+}
+.login-card-body{
+	background-color: #64350d !important;
+}
+
+@media screen and (min-width :684px) and (min-height: 665px) { 
+    .accueil-im{
+		height: 800px;
+	}
+	.accueil-im1{
+		width:1550px 
+	}
+    .conteneu-im{
+    top:100px
+    }
+
+	
+	 .parents{
+	   position: relative;
+	 
+	}
+	.parents11{
+		position: relative !important;
+		
+	}
+	
+	
+	.fil11{
+        position:absolute;
+        right:0px;
+		z-index: 999;
+        margin-right: 10% ;
+		margin-top: 35%;
+		
+	}
+	.fil{
+        position:absolute;
+        left: 0px;
+		z-index: 999;
+        margin-left: 10% ;
+		margin-top: 35%;
+		
+	}
+	.fil1{
+        position: absolute;
+		right: 0px;
+		z-index: 999;
+       
+		
+	}
+	.titre{
+		font-size: 40px;
+		width: 650px;
+	}
+	.description{
+		font-size: 1.5rem;
+		margin: 14px;
+		width: 500px;
+	}
+	.titre1{
+		font-size: 40px;
+	
+	}
+	.description1{
+		font-size: 1.5rem;
+		margin-right: 14px;
+		
+	}
+
+	
+ }
+@media screen and (max-width : 540px)  { 
+    .accueil-im1{
+		display: block;
+		top: 100px;
+		width:100%; 
+		/* font-size: 21px !important; */
+	}
+
+	 
+	.parents{
+		position: relative;
+		
+		
+	 }
+	 .enhaut{
+		position: relative !important;
+		top: -350px !important ;
+		
+	}
+	.img{
+		display: none;
+	}
+	 .enbas{
+		position: relative !important;
+		top: 365px !important;
+	}
+	.fil11{
+        position:relative;
+        right:0px;
+		z-index: 999;
+        margin-right: 10% ;
+		margin-top: 35%;
+		
+	}
+	/* style="
+	position: relative !important;
+	top: 341px !important;"
+	style="
+              position: relative !important; */
+		
+		
+	/* .parents1 .fil1{
+        position: relative;
+		right: 0px;
+		top: 0%;
+		bottom: 394px; 
+		
+	} */
+	/* .parents2.fil2{
+        position: relative;
+		right: 0px;
+		top: 394px; */
+		 
+		
+		
+	}
+
+
+
+
+ @media screen and(max-height:800) {
+	.cc-navbar{
+		z-index: 0px;
+	}
+
+ }

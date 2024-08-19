@@ -1,0 +1,23 @@
+
+@import "~admin-lte/plugins/fontawesome-free/css/all.css";
+@import "~admin-lte/dist/css/adminlte.css";
+@import "~admin-lte/plugins/summernote/summernote-bs4.min.css";
+
+
+.ellipsis{
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+.ellipsis1{
+    
+    white-space:nowrap;
+    overflow:hidden;
+}
+.logo{
+    width: 100%;
+    aspect-ratio: auto 200 / 150;
+    height: 120px;
+    padding-top: 12px;
+}

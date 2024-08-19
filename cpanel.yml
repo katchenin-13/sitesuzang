@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/appatamc/newsuzang.appatam.com/
+    - /bin/cp * $DEPLOYPATH
