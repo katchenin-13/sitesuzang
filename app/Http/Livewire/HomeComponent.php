@@ -33,7 +33,7 @@ class HomeComponent extends Component
            };*/
         
         return view('livewire.font.home-component',[
-            "contenus" => Contenu::all(),
+            "contenues" => Contenu::all(),
             "clients" => Client::latest()->get()
           
         ])->layout("layouts.base");

@@ -23,7 +23,7 @@ use App\Http\Livewire\CompetenceComp;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\ClientComponent;
 use App\Http\Livewire\ContactComponent;
-use App\Http\Controllers\LangController;
+use App\Http\Livewire\LangController;
 use App\Http\Livewire\CarriereComponent;
 use App\Http\Livewire\ServicesComponent;
 use App\Http\Controllers\Auth\LoginController;

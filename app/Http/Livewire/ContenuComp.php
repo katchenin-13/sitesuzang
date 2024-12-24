@@ -78,7 +78,7 @@ class ContenuComp extends Component
         }
 
         return view('livewire.contenus.index',[
-            "contenuss" =>  $contenuQuery->latest()->paginate(5),
+            "contenues" =>  $contenuQuery->latest()->paginate(5),
             "contenu" => Contenu::find("id"),
             "roles" => Role::all()
         ])
@@ -251,15 +251,10 @@ class ContenuComp extends Component
         $contenus->extraitang = $this->edit_extraitang;
         $contenus->contenus = $this->edit_contenus;
 
-        $contenus->title = $this->edit_titre;
-        $contenus->extraitang = $this->edit_extraitang;
-        $contenus->contenus = $this->edit_contenus;
-       
-
+        $contenus->imageUrl = $filename;
         $contenus->type =   $typeupdate;
         $contenus->page =   $this->edit_page;
         $contenus->user_id = $this->user_id ;
-        $contenus->imageUrl = $filename;
         $result = $contenus->save();
         if ($result) {
             $this->resetField();

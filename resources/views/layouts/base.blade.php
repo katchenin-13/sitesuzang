@@ -113,6 +113,7 @@
 <!-- jQuery UI 1.11.4 -->
 <script src="{{ mix('js/app.js') }}"></script>
 
+
   <!-- Vendor JS Files -->
   <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{asset('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
@@ -122,45 +123,43 @@
   <script src="{{asset('assets/vendor/php-email-form/validate.js')}}"></script>
   <script src="{{asset('assets/Holdon/HoldOn.min.js')}}"></script>
    
-  <script>
-    $(document).ready(function () {
-    $('.dropdown-item').on('click', function (e) {
-    e.preventDefault();
-    
-    var selectedLang = $(this).data('lang');
-    var currentUrl = window.location.href;
-
-     // Vérifier si l'URL est de la forme /langue
-    var isHomePage = currentUrl.match(/^https?:\/\/[^\/]+\/[a-z]{2}(\/|$)/i);
-
-     // Si c'est la page d'accueil, rediriger vers la page d'accueil avec la langue sélectionnée
-    if (isHomePage == null) {
-      
-    currentUrl = '/' + selectedLang;
-    window.location.href = currentUrl;
-    
-    } else {
-      
-    // Extraire la langue actuelle de l'URL
-    var urlSegments = currentUrl.split('/');
-    var currentLang = urlSegments[3];
-    
-    // Construire la nouvelle URL avec la langue sélectionnée
-    var newUrl = currentUrl.replace('/' + currentLang + '/', '/' + selectedLang + '/');
-    
-    // Effectuer une redirection vers la nouvelle URL
-    window.location.href = newUrl;
-    }
-    });
-    });
-  </script>
-
  
-  
-
   @yield('scripts')
   
+<script>
+  $(document).ready(function () {
+    $('.dropdown-item').on('click', function (e) {
+      e.preventDefault();
 
+      var selectedLang = $(this).data('lang');
+      var currentUrl = window.location.href;
+
+      // Vérifier si l'URL est la page d'accueil avec langue (par ex. : http://127.0.0.1:8000/fr ou http://127.0.0.1:8000/fr/)
+      var isHomePageWithLang = currentUrl.match(/^https?:\/\/[^\/]+\/[a-z]{2}(\/?)$/i);
+
+      if (isHomePageWithLang) {
+        // Rediriger vers la page d'accueil avec la langue sélectionnée, sans le '/' final
+        var newUrl = currentUrl.replace(/\/[a-z]{2}(\/?)$/, '/' + selectedLang);
+        window.location.href = newUrl;
+      } else {
+        // Gérer les autres URL
+        var urlSegments = currentUrl.split('/');
+        var currentLang = urlSegments[3]; // Langue actuelle dans l'URL
+
+        if (/^[a-z]{2}$/i.test(currentLang)) {
+          // Remplacer la langue actuelle par la langue sélectionnée
+          var newUrl = currentUrl.replace('/' + currentLang + '/', '/' + selectedLang + '/');
+          window.location.href = newUrl;
+        } else {
+          // Ajouter la langue au début de l'URL si elle n'existe pas
+          var baseUrl = currentUrl.replace(/^https?:\/\/[^\/]+/, ''); // Supprimer le domaine
+          var newUrl = '/' + selectedLang + baseUrl;
+          window.location.href = newUrl;
+        }
+      }
+    });
+  });
+</script>
   <!-- Template Main JS File -->
   <script src="{{asset('assets/js/main.js')}}"></script>
 

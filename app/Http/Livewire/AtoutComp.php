@@ -73,9 +73,9 @@ class AtoutComp extends Component
                 "titre" => "required",
                 "extrait" => "required|max:300|min:10|required|",
                 "contenu" => "required",
-                "title" => "required",
-                "extraitang" => "required|max:300|min:10|required|",
-                "contenus" => "required",
+                "title" => "",
+                "extraitang" => "|max:300|min:10|",
+                "contenus" => "",
                 // "imageUrl" => "image|max:2040"
             ];
         }
@@ -142,9 +142,9 @@ class AtoutComp extends Component
             "extrait" => "required|max:150",
            "contenu" => "required",
 
-            "title" => "required",
-            "extraitang" => "required|max:150",
-            "contenus" => "required",
+            "title" => "",
+            "extraitang" => "|max:150",
+            "contenus" => "",
         //    "imageUrl" => "image|max:2040"
         ]);
 

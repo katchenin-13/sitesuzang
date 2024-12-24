@@ -18,7 +18,6 @@ class Contenu extends Model
         'title',
         'extraitang',
         'contenus',
-        'extraitang',
         'imageUrl',
         'type',
         'page',

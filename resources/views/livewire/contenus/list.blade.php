@@ -15,7 +15,8 @@
                 <option value="3">Service</option>
                 <option value="4">Clients</option>
                 <option value="5">Carrières</option>
-                <option value="6">Contqcts</option>
+                <option value="6">Contacts</option>
+                <option value="7">Autre passe bannière</option>
               </select>
             </div>
           </div>
@@ -72,17 +73,17 @@
               </tr>
               @endif --}}
 
-             @forelse ($contenuss as $contenu)
+             @forelse ($contenues as $contenux)
               <tr>
-                <td><img src="{{asset('storage')}}/{{$contenu->imageUrl}}" style="width: 70px;height:70px;" alt="">
+                <td><img src="{{asset('storage')}}/{{$contenux->imageUrl}}" style="width: 70px;height:70px;" alt="">
                 </td>
-                <td>{!! $contenu->titre !!}</td>
-                <td>{!! $contenu->extrait !!} </td>
+                <td>{!! $contenux->titre !!}</td>
+                <td>{!! $contenux->extrait !!} </td>
               
-                <td class="text-center"><span class="tag tag-success">{{ $contenu->created_at->diffForHumans() }}</span></td>
+                <td class="text-center"><span class="tag tag-success">{{ $contenux->created_at->diffForHumans() }}</span></td>
                 <td class="text-center">
-                  <button class="btn btn-link" wire:click="goToEditContenu({{$contenu->id}})"> <i class="far fa-edit"></i> </button>
-                  <button class="btn btn-link" wire:click="confirmDelete('{{ $contenu->titre }}', {{$contenu->id}})"> <i
+                  <button class="btn btn-link" wire:click="goToEditContenu({{$contenux->id}})"> <i class="far fa-edit"></i> </button>
+                  <button class="btn btn-link" wire:click="confirmDelete('{{ $contenux->titre }}', {{$contenux->id}})"> <i
                       class="far fa-trash-alt"></i> </button>
                 </td>
               </tr>
@@ -104,7 +105,7 @@
       <!-- /.card-body -->
       <div class="card-footer">
         <div class="float-right">
-        {{ $contenuss->links() }}
+        {{ $contenues->links() }}
         {{-- @if($contenus !== null)
           {{ $contenus->links() }}
           @endif --}}
