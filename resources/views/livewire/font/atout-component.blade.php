@@ -30,9 +30,8 @@
         {!!$contenu->titre!!}
         @endif
         @if ($contenu->type=="blog_8" && app()->getLocale() == 'en')
-        {!!$contenu->titre!!}
+        {!!$contenu->title!!}
         @endif
-      
         @endforeach
       </h1>
       {{-- <h1> Le meilleur, rien de moins</h1> --}}
