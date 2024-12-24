@@ -126,7 +126,32 @@
  
   @yield('scripts')
   
-<script>
+  <script>
+    $(document).ready(function () {
+      $('.dropdown-item').on('click', function (e) {
+        e.preventDefault();
+  
+        var selectedLang = $(this).data('lang');
+        var currentUrl = window.location.href;
+  
+        // Extraire la base URL jusqu'à la langue (par ex. : /fr ou /en)
+        var baseUrlMatch = currentUrl.match(/^(https?:\/\/[^\/]+(\/[^\/]+)*\/)([a-z]{2})(\/|$)/i);
+        if (baseUrlMatch) {
+          // Si une langue est détectée, remplacer par la nouvelle langue
+          var baseUrl = baseUrlMatch[1]; // Partie de l'URL avant la langue
+          var newUrl = baseUrl + selectedLang + '/';
+          window.location.href = newUrl;
+        } else {
+          // Si aucune langue n'est détectée, ajouter la langue après la base URL
+          var rootUrlMatch = currentUrl.match(/^(https?:\/\/[^\/]+(\/[^\/]+)*\/)/i);
+          var rootUrl = rootUrlMatch ? rootUrlMatch[1] : currentUrl;
+          var newUrl = rootUrl + selectedLang;
+          window.location.href = newUrl;
+        }
+      });
+    });
+  </script>
+{{-- <script>
   $(document).ready(function () {
     $('.dropdown-item').on('click', function (e) {
       e.preventDefault();
@@ -159,7 +184,7 @@
       }
     });
   });
-</script>
+</script> --}}
   <!-- Template Main JS File -->
   <script src="{{asset('assets/js/main.js')}}"></script>
 
